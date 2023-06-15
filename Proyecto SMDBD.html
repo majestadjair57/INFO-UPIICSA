@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>INFO-UPIICSA</title>
+  <style>
+    body {
+      background-color: beige;
+      margin: 0;
+      padding-top: 50px;
+      text-align: center;
+      font-family: Arial, sans-serif; /* Fuente Arial para todo el cuerpo del documento */
+    }
+
+    h1 {
+      font-weight: bold;
+      margin: 0;
+      font-size: 48px; /* Tamaño del título principal duplicado */
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .logo-container img {
+      height: 100px; /* Tamaño de los logos duplicado */
+      margin: 0 25px; /* Separación del 50% del título principal */
+    }
+
+    .pdf-container {
+      margin-top: 20px;
+    }
+
+    .pdf-link {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 24px; /* Tamaño de los botones duplicado */
+      font-family: Arial, sans-serif;
+      background-color: #ddd;
+      padding: 10px 20px; /* Ajuste del padding para los botones */
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pdf-link:hover {
+      background-color: #ccc;
+    }
+
+    .pdf-link:active {
+      background-color: #bbb;
+    }
+
+    .pdf-list {
+      text-align: left;
+    }
+
+    .info-container {
+      margin: 20px auto;
+      width: 80%;
+      border: 2px solid #00CCCC;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #D1EEEE;
+    }
+
+    .info-text {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .bordered-text {
+      border: 2px solid black; /* Borde negro */
+      background-color: #f2f2f2; /* Fondo gris muy claro */
+      padding: 10px; /* Espacio interior */
+      border-radius: 10px; /* Bordes curvados */
+      margin-bottom: 20px; /* Espacio inferior */
+    }
+  </style>
+  <script>
+    function openPDF(url) {
+      window.open(url);
+    }
+  </script>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="C:\Users\jefej\OneDrive\Documentos\Carpeta_de_evidencias_equipo3_5CM51\UNIDAD 3\logo IPN.png" alt="Logo 1" style="height: 100px;"> <!-- Tamaño de los logos duplicado -->
+    <h1 style="font-size: 48px;">INFO-UPIICSA</h1> <!-- Tamaño del título principal duplicado -->
+    <img src="C:\Users\jefej\OneDrive\Documentos\Carpeta_de_evidencias_equipo3_5CM51\UNIDAD 3\logo UPIICSA.png" alt="Logo 2" style="height: 100px;"> <!-- Tamaño de los logos duplicado -->
+  </div>
+
+  <div class="info-container">
+    <p class="info-text">Bienvenidos a INFO-UPIICSA, la página que ayudará a los estudiantes a comprender mejor las reglas, normas y leyes que envuelven a la escuela. Sabemos que a muchas veces la correcta interpretación de las leyes puede resultar difícil o compleja por encontrarse llena de tecnicismos y líneas que son más del ámbito jurídico y esto genera que por desconocimiento de las leyes muchas veces se realicen conductas que los reglamentos, leyes y normas no permiten.</p>
+
+
+    <p class="info-text">Peeeeero... no te preocupes, en esta página lo explicaremos y responderemos algunas de las preguntas más frecuentes que puede tener un alumno. Por ejemplo, ¿sabías que los profesores no te pueden negar el derecho a examen extraordinario, condicionándolo con asistencias, haber presentado trabajos o exámenes parciales? ¿Sabes la diferencia entre "falta administrativa" y "delito"? ¿Sabes si es legal o puedes vender artículos de cualquier índole dentro de la institución?</p>
+
+    <p class="info-text">Bueno, aquí encontrarás información relevante y sencilla de entender para poder actuar, defender y gozar de tus derechos; claro, con fundamentos legales.</p>
+  </div>
+
+  <div class="pdf-container">
+    <button class="pdf-link" onclick="openPDF('https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf')">En cuanto a la Constitución Política de los Estados Unidos Mexicanos ↓</button>
+    <div class="bordered-text">
+      <p>El artículo tercero de la Constitución Política de los Estados Unidos Mexicanos se refiere al derecho a la educación. En resumen, este artículo establece que toda persona tiene derecho a recibir educación de calidad y el Estado tiene la responsabilidad de garantizarla. La educación debe ser laica, gratuita, obligatoria, integral, inclusiva y equitativa. Se promoverá el respeto a los derechos humanos, los valores, la cultura, la ciencia y la tecnología. Además, se reconoce el derecho de los padres a elegir el tipo de educación que deseen para sus hijos, siempre y cuando se respeten los principios mencionados.</p>
+    </div>
+    <button class="pdf-link" onclick="openPDF('https://www.aplicaciones.abogadogeneral.ipn.mx/leyes/leyorganicadelipn.pdf')">Ley Orgánica IPN ↓</button>
+    <button class="pdf-link" onclick="showPDFs()">Gacetas Oficiales IPN ↓</button>
+    <div id="pdf-list" class="pdf-list" style="display: none;">
+      <p><a href="https://www.ipn.mx/assets/files/normatividad/docs/reglamentos/GAC_1569.pdf">REGLAMENTO PARA EL OTORGAMIENTO DE BECAS DE ESTUDIOS, APOYOS ECONÓMICOS Y LICENCIAS CON GOCE DE SUELDO ↓</a></p>
+      <p><a href="https://www.ipn.mx/assets/files/normatividad/docs/reglamentos/Reglamento-Organico-IPN-2020.pdf">REGLAMENTO ORGANICO Símbolo ↓</a></p>
+      <p><a href="https://www.ipn.mx/assets/files/normatividad/docs/reglamentos/Gac-1519.pdf">PROTOCOLOPARA LA PREVENCIÓN, DETECCIÓN,ATENCIÓN Y SANCIÓN DE LAVIOLENCIA DE GÉNERO ↓</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showPDFs() {
+      var pdfList = document.getElementById("pdf-list");
+      if (pdfList.style.display === "none") {
+        pdfList.style.display = "block";
+      } else {
+        pdfList.style.display = "none";
+      }
+    }
+  </script>
+</body> 
+</html>
